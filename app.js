@@ -22,7 +22,11 @@ app.get("/results", function(req, res) {
   });
 });
 
+// for local hosting:
+// app.listen(3000, function() {
+//   console.log("SERVER HAS STARTED: LOCALHOST:3000");
+// });
 
-app.listen(3000, function() {
+app.listen(process.env.PORT, process.env.IP, function() {
   console.log("SERVER HAS STARTED: LOCALHOST:3000");
 });
