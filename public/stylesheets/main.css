@@ -1,13 +1,24 @@
 body {
   margin: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  /* background: url("https://images.unsplash.com/photo-1524859330668-c357331384f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1356&q=80") no-repeat center center fixed; */
+  /* background: url("https://images.pexels.com/photos/616358/pexels-photo-616358.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center center fixed; */
+  background: url("https://images.pexels.com/photos/373019/pexels-photo-373019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center center fixed;
+  height: 100%;
+  width: auto;
+  -webkit-background-siz: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
 }
 
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background: linear-gradient(to right, rgb(143, 255, 220), rgb(255, 159, 3)); */
-  background: linear-gradient(to right, rgb(247, 255, 171), rgb(255, 143, 52));
+  /* background: linear-gradient(to right, rgb(247, 255, 171), rgb(255, 143, 52)); */
   /* background-color: #E0AB1D; */
 }
 
@@ -16,19 +27,12 @@ body, html {
   display: grid
 }
 
-h1, h2 {
+h1 {
+  font-size: 2.8em;
+  color: #3b3b3b;
+  font-family: "Fredericka the Great", cursive;
   margin: 20px auto;
   text-align: center;
-}
-
-h1 {
-  font-size: 2em;
-  color: #3b3b3b;
-}
-
-h2 {
-  font-size: 1em;
-  color: #3b3b3b;
 }
 
 form {
@@ -42,37 +46,26 @@ a {
 }
 
 a:hover {
-  color: #E0AB1D;
+  color: #ff8359;
   cursor: pointer;
   transition-duration: 0.1s
 }
 
-p {
-  color: #484848;
-  font-size: 1em;
-}
-
-img {
-  border-radius: 5px;
-  max-width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
-
 .main-content {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
   border: 1px solid hsla(0, 05, 0%, 0/04);
   width: 70vw;
   margin: auto;
   box-shadow: 3px 3px 20px rgba(0,0,0,0.2);
   padding: 15px;
+  margin-top: 35px;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  justify-content: center;
   grid-gap: 20px;
   padding: 20px;
 }
@@ -81,10 +74,42 @@ img {
   display: inline-block;
 }
 
+.image {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px 0 0 5px;
+  margin: 0;
+}
+
+.title {
+  font-size: 1.2em;
+  color: #3b3b3b;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.ing {
+  color: #484848;
+  font-size: 0.8em;
+  margin: 0;
+  padding: 0;
+}
+
+.recipe {
+  overflow: auto;
+  padding: 2px;
+}
+
 .recipe-item {
-  border: 1px solid rgba(0,0,0,0.04);
   border-radius: 5px;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  background-color: white;
+  display: grid;
+  height: 100px;
+  max-width: 300px;
+  grid-template-columns: 1fr 2fr;
 }
 
 .recipe-item:hover {
@@ -96,27 +121,27 @@ img {
   outline: none;
   padding: 7px 5px;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 0 5px 0;
 }
 
 .input:focus {
-  border: 2px solid #E0AB1D;
-  padding: 5px 5px;
+  border: 2px solid #ff8359;
+  padding: 7px 5px;
 }
 .ingredients {
-  padding-right: 120px;
+  padding-right: 80px;
 }
 
 .ingredients:focus {
-  border: 2px solid #E0AB1D;
-  padding: 5px 120px 5px 5px;
+  border: 2px solid #ff8359;
+  padding: 7px 80px 7px 5px;
 }
 
 .button {
   display: inline-block;
   border: none;
+  background: none;
   padding: 6px 10px;
-  margin: 0;
   text-decoration: none;
   color: #484848;
   font-family: sans-serif;
@@ -127,10 +152,9 @@ img {
   -moz-appearance: none;
 }
 
-.button:hover {
-  background-color: #E0AB1D;
+.button:hover, .button:focus {
+  background-color: #ff8359;
   color: white;
-  border: none;
   margin: 0;
   transition-duration: 0.1s;
 }
