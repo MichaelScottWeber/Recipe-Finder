@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,15 +10,12 @@
           href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
           crossorigin="anonymous">
-
   </head>
-
   <body>
-
     <div class="background">
       <div class="main-content">
-
-        <h1>Recipe Finder</h1>
+        <h1>What's Cookin?</h1>
+        <h2>Find the perfect recipe!</h2>
         <form class="" action="/results" method="GET">
           <input class="input" type="text" name="search" placeholder="pasta">
           <input class="input ingredients" type="text" name="ingredients" placeholder="garlic,penne,butter">
@@ -27,32 +23,23 @@
             <i class="fas fa-search"></i>
           </button>
         </form>
-
         <div class="grid-container">
-
             <% recipes["results"].forEach(function(recipe) { %>
-
               <div class="recipe-item">
                 <img class="image" src="<%= recipe["thumbnail"] %>" onerror="this.src='https://images.pexels.com/photos/45187/cutlery-eat-cutlery-set-shiny-45187.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940';">
                 <div class="recipe">
-                  <h2 class="title">
+                  <h3 class="title">
                     <a href="<%= recipe["href"] %>" target="_blank"><%= recipe["title"] %></a>
-                  </h2>
+                  </h3>
                   <p class="ing">
                     <strong>Made with: </strong>
                     <%= recipe["ingredients"] %>
                   </p>
                 </div>
-
               </div>
-
             <% }); %>
-
         </div>
-
-
       </div>
     </div>
-
   </body>
 </html>

@@ -22,7 +22,7 @@ app.get("/results", function(req, res) {
   });
 });
 
-// for local hosting:
+// // for local hosting:
 // app.listen(3000, function() {
 //   console.log("SERVER HAS STARTED: LOCALHOST:3000");
 // });
